@@ -47,13 +47,13 @@ fun GamePage(modifier: Modifier = Modifier) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         IconButton(onClick = { /*TODO*/ }, modifier = modifier.size(100.dp).rotate(40F)) {
-            Icon(painter = painterResource(id = R.drawable.scissors), contentDescription = "scissors", tint = Colors(R.drawable.scissors))
+            Icon(painter = painterResource(id = R.drawable.scissors), contentDescription = "scissors", tint = Color(R.drawable.scissors))
         }
         IconButton(onClick = { /*TODO*/ }, modifier = modifier.size(100.dp)) {
-            Icon(painter = painterResource(id = R.drawable.paper), contentDescription = "scissors")
+            Icon(painter = painterResource(id = R.drawable.paper), contentDescription = "scissors", tint = Color(R.drawable.paper))
         }
         IconButton(onClick = { /*TODO*/ }, modifier = modifier.size(100.dp)) {
-            Icon(painter = painterResource(id = R.drawable.stone), contentDescription = "scissors")
+            Icon(painter = painterResource(id = R.drawable.stone), contentDescription = "scissors", tint = Color(R.drawable.stone))
         }
     }
 }
