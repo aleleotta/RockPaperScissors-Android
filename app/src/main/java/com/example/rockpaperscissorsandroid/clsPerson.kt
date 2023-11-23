@@ -1,65 +1,59 @@
-package com.example.rockpaperscissorsandroid;
+package com.example.rockpaperscissorsandroid
 
-public class clsPerson {
-    private int id = 0;
-    private String name = "undefined";
-    private enum Elements {
+class clsPerson {
+    val id = 0
+    private var name = "undefined"
+
+    private enum class Elements {
         UNDEFINED,
         ROCK,
         PAPER,
         SCISSORS
     }
 
-    private Elements element = Elements.UNDEFINED;
+    private var element = Elements.UNDEFINED
 
-    public clsPerson(){}
-
-    public clsPerson(String name){
-        if(!name.equals("")) {
-            this.name = name;
+    constructor()
+    constructor(name: String) {
+        if (name != "") {
+            this.name = name
         }
     }
 
-    public clsPerson(String name, int element){
-        if(!name.equals("") && name != null) {
-            this.name = name;
+    constructor(name: String?, element: Int) {
+        if (name != "" && name != null) {
+            this.name = name
         }
-        if(element == 1) {
-            this.element = Elements.ROCK;
-        } else if(element == 2) {
-            this.element = Elements.PAPER;
-        } else if(element == 3) {
-            this.element = Elements.SCISSORS;
-        }
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        if(!name.equals("") && name != null) {
-            this.name = name;
+        if (element == 1) {
+            this.element = Elements.ROCK
+        } else if (element == 2) {
+            this.element = Elements.PAPER
+        } else if (element == 3) {
+            this.element = Elements.SCISSORS
         }
     }
 
-    public String getElement() {
-        String strElement = this.element.name();
-        return strElement;
+    fun getName(): String {
+        return name
     }
 
-    public void setElement(int element) {
-        if(element == 1) {
-            this.element = Elements.ROCK;
-        } else if(element == 2) {
-            this.element = Elements.PAPER;
-        } else if(element == 3) {
-            this.element = Elements.SCISSORS;
+    fun setName(name: String?) {
+        if (name != "" && name != null) {
+            this.name = name
         }
     }
 
+    fun getElement(): String {
+        return element.name
+    }
+
+    fun setElement(element: Int) {
+        if (element == 1) {
+            this.element = Elements.ROCK
+        } else if (element == 2) {
+            this.element = Elements.PAPER
+        } else if (element == 3) {
+            this.element = Elements.SCISSORS
+        }
+    }
 }
