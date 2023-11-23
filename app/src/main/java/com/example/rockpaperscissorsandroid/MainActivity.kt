@@ -46,11 +46,9 @@ fun GamePage(modifier: Modifier = Modifier) {
     ) {
         TextButton(onClick = { /*TODO*/ }, modifier = modifier.size(120.dp),
             content = {
-                Image(painter = painterResource(id = R.drawable.scissors),
-                    contentDescription = "scissors",
-                    modifier = modifier
-                        .size(100.dp)
-                        .rotate(40F)
+                Image(painter = painterResource(id = R.drawable.stone),
+                    contentDescription = "stone",
+                    modifier = modifier.size(100.dp)
                 )
             }
         )
@@ -58,17 +56,15 @@ fun GamePage(modifier: Modifier = Modifier) {
             content = {
                 Image(painter = painterResource(id = R.drawable.paper),
                     contentDescription = "paper",
-                    modifier = modifier
-                        .size(90.dp)
+                    modifier = modifier.size(90.dp)
                 )
             }
         )
         TextButton(onClick = { /*TODO*/ }, modifier = modifier.size(120.dp),
             content = {
-                Image(painter = painterResource(id = R.drawable.stone),
-                    contentDescription = "stone",
-                    modifier = modifier
-                        .size(100.dp)
+                Image(painter = painterResource(id = R.drawable.scissors),
+                    contentDescription = "scissors",
+                    modifier = modifier.size(100.dp).rotate(40F)
                 )
             }
         )
